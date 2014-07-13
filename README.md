@@ -4,15 +4,12 @@ A Hubot script for XXX
 
 ## Usage
 
-    $ npm install bouzuya/hubot-XXX
-
-or
-
     $ npm install git://github.com/bouzuya/hubot-XXX.git
 
 or
 
-    $ npm install git://github.com/bouzuya/hubot-XXX.git\#0.1.0
+    $ # TAG is the package version you need.
+    $ npm install git://github.com/bouzuya/hubot-XXX.git\#TAG
 
 ## License
 
