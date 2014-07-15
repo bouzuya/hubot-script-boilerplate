@@ -13,7 +13,8 @@ or
 
 ## Configuration
 
-    $ export XXX='...'
+    $ export HUBOT_XXX_VAR1='...'
+    $ export HUBOT_XXX_VAR2='...'
 
 ## Commands
 
@@ -29,4 +30,7 @@ MIT
 
 ## Badges
 
-[![Build Status](https://travis-ci.org/bouzuya/hubot-XXX.svg?branch=master)](https://travis-ci.org/bouzuya/hubot-XXX)
+[![Build Status][travis-status]][travis]
+
+[travis]: https://travis-ci.org/bouzuya/hubot-XXX
+[travis-status]: https://travis-ci.org/bouzuya/hubot-XXX.svg?branch=master
