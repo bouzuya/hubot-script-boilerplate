@@ -1,6 +1,6 @@
 {
   "name": "hubot-XXX",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A Hubot script for XXX",
   "main": "index.js",
   "scripts": {
