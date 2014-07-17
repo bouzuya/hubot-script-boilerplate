@@ -4,7 +4,7 @@
   "description": "A Hubot script for XXX",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register --reporter spec --recursive"
+    "test": "mocha --compilers coffee:coffee-script/register --slow 200 --reporter spec --recursive"
   },
   "repository": {
     "type": "git",
