@@ -16,6 +16,6 @@ describe 'xxx', ->
       @kakashi
         .receive sender, message
         .then =>
-          expect(@kakashi.send.callCount).to.equal(1)
+          expect(@kakashi.send).to.have.callCount(1)
           expect(@kakashi.send.firstCall.args[1]).to.equal('XXX!')
         .then (-> done()), done
