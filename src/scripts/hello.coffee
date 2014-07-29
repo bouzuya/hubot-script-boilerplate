@@ -1,5 +1,5 @@
 # Description
-#   XXX
+#   A Hubot script that XXX
 #
 # Dependencies:
 #   None
@@ -14,5 +14,5 @@
 #   bouzuya <m@bouzuya.net>
 #
 module.exports = (robot) ->
-  robot.respond /XXX$/i, (res) ->
-    res.send 'XXX'
+  robot.respond /hello$/i, (res) ->
+    res.send 'hello!'

@@ -1,10 +1,10 @@
 {
   "name": "hubot-XXX",
   "version": "0.0.0",
-  "description": "A Hubot script for XXX",
+  "description": "A Hubot script that XXX",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register --slow 200 --reporter spec --recursive"
+    "test": "mocha --require espower-coffee/guess --reporter spec test/**/*.coffee"
   },
   "repository": {
     "type": "git",
@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/bouzuya/hubot-XXX",
   "devDependencies": {
-    "chai": "^1.9.1",
     "coffee-script": "^1.7.1",
-    "kakashi": "0.3.1",
+    "espower-coffee": "^0.1.0",
+    "hubot": "^2.8.0",
     "mocha": "^1.20.1",
-    "sinon-chai": "^2.5.0",
+    "power-assert": "^0.7.2",
     "sinon": "^1.10.3"
   }
 }
