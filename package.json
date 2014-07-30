@@ -4,6 +4,7 @@
   "description": "A Hubot script that XXX",
   "main": "index.js",
   "scripts": {
+    "robot": "hubot --adapter shell",
     "test": "mocha --require espower-coffee/guess --reporter spec test/**/*.coffee"
   },
   "repository": {

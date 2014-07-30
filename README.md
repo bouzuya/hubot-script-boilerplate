@@ -25,6 +25,17 @@ See [`src/scripts/XXX.coffee`](src/scripts/XXX.coffee) for full documentation.
 
 MIT
 
+## Development
+
+### Run test
+
+    $ npm test
+
+### Run robot
+
+    $ npm run robot
+
+
 ## Badges
 
 [![Build Status][travis-status]][travis]
