@@ -1,4 +1,4 @@
-{Robot, TextMessage} = require 'hubot'
+{Robot, User, TextMessage} = require 'hubot'
 assert = require 'power-assert'
 path = require 'path'
 sinon = require 'sinon'
@@ -25,9 +25,9 @@ describe 'hello', ->
 
     describe 'receive "@hubot hello"', ->
       beforeEach ->
-        sender = { id: 'bouzuya', room: 'hitoridokusho' }
+        @sender = new User 'bouzuya', room: 'hitoridokusho'
         message = '@hubot hello'
-        @robot.adapter.receive new TextMessage(sender, message)
+        @robot.adapter.receive new TextMessage(@sender, message)
 
       it 'calls *hello* with "@hubot hello"', ->
         assert @callback.callCount is 1
