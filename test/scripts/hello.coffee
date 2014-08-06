@@ -6,6 +6,9 @@ sinon = require 'sinon'
 describe 'hello', ->
   beforeEach (done) ->
     @sinon = sinon.sandbox.create()
+    # for warning: possible EventEmitter memory leak detected.
+    # process.on 'uncaughtException'
+    @sinon.stub process, 'on', -> null
     @robot = new Robot(path.resolve(__dirname, '..'), 'shell', false, 'hubot')
     @robot.adapter.on 'connected', =>
       @robot.load path.resolve(__dirname, '../../src/scripts')
