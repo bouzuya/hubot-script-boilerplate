@@ -45,7 +45,7 @@ describe 'hello', ->
       beforeEach ->
         @send = @sinon.spy()
         @hello
-          match: ["@hubot hello"]
+          match: ['@hubot hello']
           send: @send
 
       it 'send "hello!"', ->
