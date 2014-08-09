@@ -34,8 +34,9 @@ describe 'hello', ->
 
       it 'calls *hello* with "@hubot hello"', ->
         assert @callback.callCount is 1
-        assert @callback.firstCall.args[0].match.length is 1
-        assert @callback.firstCall.args[0].match[0] is '@hubot hello'
+        match = @callback.firstCall.args[0].match
+        assert match.length is 1
+        assert match[0] is '@hubot hello'
 
   describe 'listeners[0].callback', ->
     beforeEach ->
@@ -47,6 +48,27 @@ describe 'hello', ->
         @hello
           match: ['@hubot hello']
           send: @send
+
+      it 'send "hello!"', ->
+        assert @send.callCount is 1
+        assert @send.firstCall.args[0] is 'hello!'
+
+    describe 'receive "@hubot hello"', ->
+      beforeEach ->
+        responseBody = greeting: 'hello'
+        httpGetResponse = @sinon.stub()
+        httpGetResponse
+          .onFirstCall()
+          .callsArgWith 0, null, null, JSON.stringify(responseBody)
+        httpGet = @sinon.stub()
+        httpGet.onFirstCall().returns httpGetResponse
+        http = @sinon.stub()
+        http.onFirstCall().returns get: httpGet
+        @send = @sinon.spy()
+        @hello
+          match: ['@hubot hello']
+          send: @send
+          http: http
 
       it 'send "hello!"', ->
         assert @send.callCount is 1
