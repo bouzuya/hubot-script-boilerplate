@@ -38,7 +38,10 @@ MIT
 
 ## Badges
 
-[![Build Status][travis-status]][travis]
+[![Build Status][travis-badge]][travis]
+[![Dependencies status][david-dm-badge]][david-dm]
 
 [travis]: https://travis-ci.org/bouzuya/hubot-XXX
-[travis-status]: https://travis-ci.org/bouzuya/hubot-XXX.svg?branch=master
+[travis-badge]: https://travis-ci.org/bouzuya/hubot-XXX.svg?branch=master
+[david-dm]: https://david-dm.org/bouzuya/hubot-XXX
+[david-dm-badge]: https://david-dm.org/bouzuya/hubot-XXX.png
