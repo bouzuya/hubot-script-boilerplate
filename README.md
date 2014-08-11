@@ -1,6 +1,6 @@
 # hubot-XXX
 
-A Hubot script that XXX
+A Hubot script that DESCRIPTION
 
 ## Installation
 

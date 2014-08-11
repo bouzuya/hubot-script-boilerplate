@@ -1,5 +1,5 @@
 # Description
-#   A Hubot script that XXX
+#   A Hubot script that DESCRIPTION
 #
 # Dependencies:
 #   None
@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot XXX [<args>] - XXX
+#   hubot XXX [<args>] - DESCRIPTION
 #
 # Author:
 #   bouzuya <m@bouzuya.net>
