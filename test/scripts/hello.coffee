@@ -23,16 +23,16 @@ describe 'hello', ->
 
   describe 'listeners[0].regex', ->
     beforeEach ->
+      @sender = new User 'bouzuya', room: 'hitoridokusho'
       @callback = @sinon.spy()
       @robot.listeners[0].callback = @callback
 
     describe 'receive "@hubot hello"', ->
       beforeEach ->
-        @sender = new User 'bouzuya', room: 'hitoridokusho'
         message = '@hubot hello'
         @robot.adapter.receive new TextMessage(@sender, message)
 
-      it 'calls *hello* with "@hubot hello"', ->
+      it 'calls with "@hubot hello"', ->
         assert @callback.callCount is 1
         match = @callback.firstCall.args[0].match
         assert match.length is 1
