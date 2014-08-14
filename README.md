@@ -21,10 +21,6 @@ or
 
 See [`src/scripts/XXX.coffee`](src/scripts/XXX.coffee) for full documentation.
 
-## License
-
-MIT
-
 ## Development
 
 ### Run test
@@ -35,10 +31,13 @@ MIT
 
     $ npm run robot
 
+## License
+
+[MIT](LICENSE)
+
 ## Author
 
 [bouzuya](http://bouzuya.net)
-
 
 ## Badges
 
