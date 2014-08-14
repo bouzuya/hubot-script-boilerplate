@@ -35,6 +35,10 @@ MIT
 
     $ npm run robot
 
+## Author
+
+[bouzuya](http://bouzuya.net)
+
 
 ## Badges
 
