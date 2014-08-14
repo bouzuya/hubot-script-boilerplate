@@ -2,7 +2,7 @@
   "name": "hubot-XXX",
   "version": "0.0.0",
   "description": "A Hubot script that DESCRIPTION",
-  "main": "index.js",
+  "main": "index.coffee",
   "scripts": {
     "robot": "hubot --adapter shell",
     "test": "mocha --require espower-coffee/guess --reporter spec test/**/*.coffee"
