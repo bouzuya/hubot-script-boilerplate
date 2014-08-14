@@ -37,7 +37,7 @@ See [`src/scripts/XXX.coffee`](src/scripts/XXX.coffee) for full documentation.
 
 ## Author
 
-[bouzuya](http://bouzuya.net)
+[bouzuya][user] &lt;[m@bouzuya.net][mail]&gt; ([http://bouzuya.net][url])
 
 ## Badges
 
@@ -48,3 +48,6 @@ See [`src/scripts/XXX.coffee`](src/scripts/XXX.coffee) for full documentation.
 [travis-badge]: https://travis-ci.org/bouzuya/hubot-XXX.svg?branch=master
 [david-dm]: https://david-dm.org/bouzuya/hubot-XXX
 [david-dm-badge]: https://david-dm.org/bouzuya/hubot-XXX.png
+[user]: https://github.com/bouzuya
+[mail]: mailto:m@bouzuya.net
+[url]: http://bouzuya.net
