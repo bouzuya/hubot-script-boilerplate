@@ -32,7 +32,7 @@ describe 'hello', ->
         message = '@hubot hello'
         @robot.adapter.receive new TextMessage(@sender, message)
 
-      it 'calls with "@hubot hello"', ->
+      it 'matches', ->
         assert @callback.callCount is 1
         match = @callback.firstCall.args[0].match
         assert match.length is 1
