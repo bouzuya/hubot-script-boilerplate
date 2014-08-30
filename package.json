@@ -4,8 +4,12 @@
   "description": "A Hubot script that DESCRIPTION",
   "main": "index.coffee",
   "scripts": {
+    "build": "gulp",
+    "clean": "gulp clean",
+    "coveralls": "gulp coveralls",
     "robot": "hubot --adapter shell",
-    "test": "mocha --require espower-coffee/guess --reporter spec test/**/*.coffee"
+    "test": "gulp test",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -26,13 +30,19 @@
   },
   "homepage": "https://github.com/bouzuya/hubot-XXX",
   "devDependencies": {
-    "espower-coffee": "^0.1.0",
+    "coffee-script": "^1.7.1",
     "hubot": "^2.8.0",
+    "del": "^0.1.2",
+    "gulp": "^3.8.7",
+    "gulp-coffee": "^2.1.1",
+    "gulp-coveralls": "^0.1.2",
+    "gulp-espower": "^0.8.0",
+    "gulp-istanbul": "^0.2.2",
+    "gulp-mocha": "^1.0.0",
+    "gulp-util": "^3.0.0",
+    "merge-stream": "^0.1.5",
     "mocha": "^1.20.1",
     "power-assert": "^0.7.2",
     "sinon": "^1.10.3"
-  },
-  "peerDependencies": {
-    "coffee-script": "1.7.x"
   }
 }

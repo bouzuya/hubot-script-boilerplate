@@ -1,2 +1,4 @@
-node_modules
+.tmp
 *.log
+coverage
+node_modules
