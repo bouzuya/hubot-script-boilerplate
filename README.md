@@ -25,13 +25,7 @@ See [`src/scripts/XXX.coffee`](src/scripts/XXX.coffee).
 
 ## Development
 
-### Run test
-
-    $ npm test
-
-### Run robot
-
-    $ npm run robot
+`npm run`
 
 ## License
 
