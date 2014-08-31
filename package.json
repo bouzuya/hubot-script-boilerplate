@@ -2,7 +2,7 @@
   "name": "hubot-XXX",
   "version": "0.0.0",
   "description": "A Hubot script that DESCRIPTION",
-  "main": "index.coffee",
+  "main": "index.js",
   "scripts": {
     "build": "gulp",
     "clean": "gulp clean",
