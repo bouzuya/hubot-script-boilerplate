@@ -4,7 +4,6 @@ gutil = require 'gulp-util'
 paths =
   src: './src/**/*.coffee'
   test: './test/**/*.coffee'
-  testFixtures: './test/*.png'
   coverage: './coverage/**/lcov.info'
   coverageDir: './coverage/'
   compiledDir: './.tmp/'
@@ -42,12 +41,7 @@ gulp.task 'compile-src', ->
     .pipe coffee(bare: true).on('error', gutil.log)
     .pipe gulp.dest(paths.compiledSrcDir)
 
-gulp.task 'copy-test-fixtures', ->
-  gulp
-    .src paths.testFixtures
-    .pipe gulp.dest(paths.compiledTestDir)
-
-gulp.task 'compile-test', ['copy-test-fixtures'], ->
+gulp.task 'compile-test', ->
   coffee = require 'gulp-coffee'
   espower = require 'gulp-espower'
   gulp
