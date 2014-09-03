@@ -36,18 +36,24 @@ gulp.task 'build', ->
 
 gulp.task 'compile-src', ->
   coffee = require 'gulp-coffee'
+  sourcemaps = require 'gulp-sourcemaps'
   gulp
     .src paths.src
+    .pipe sourcemaps.init()
     .pipe coffee(bare: true).on('error', gutil.log)
+    .pipe sourcemaps.write()
     .pipe gulp.dest(paths.compiledSrcDir)
 
 gulp.task 'compile-test', ->
   coffee = require 'gulp-coffee'
   espower = require 'gulp-espower'
+  sourcemaps = require 'gulp-sourcemaps'
   gulp
     .src paths.test
+    .pipe sourcemaps.init()
     .pipe coffee(bare: true).on('error', gutil.log)
     .pipe espower()
+    .pipe sourcemaps.write()
     .pipe gulp.dest(paths.compiledTestDir)
 
 gulp.task 'test', ['compile-src', 'compile-test'], ->
