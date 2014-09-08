@@ -13,6 +13,25 @@ paths =
   compiledTestDir: './.tmp/test/'
   buildDir: './lib/'
 
+hubotHelp =
+  init: ->
+    through = require 'through2'
+    through.obj (file, encoding, next) ->
+      help = for line in file.contents.toString().split('\n')
+        break unless line[0] is '#' or line.substring(0, 2) is '//'
+        line.replace(new RegExp('^#(\\s*)'), '//$1')
+      file.hubotHelp = help.join('\n') + '\n'
+      next null, file
+  write: ->
+    through = require 'through2'
+    through.obj (file, encoding, next) ->
+      return next(null, file) unless file.hubotHelp?
+      file.contents = Buffer.concat [
+        new Buffer(file.hubotHelp)
+        file.contents
+      ]
+      next null, file
+
 gulp.task 'clean', (done) ->
   del = require 'del'
   del [
@@ -31,7 +50,9 @@ gulp.task 'build', ->
   coffee = require 'gulp-coffee'
   gulp
     .src paths.src
+    .pipe hubotHelp.init()
     .pipe coffee(bare: true).on('error', gutil.log)
+    .pipe hubotHelp.write()
     .pipe gulp.dest(paths.buildDir)
 
 gulp.task 'compile-src', ->
@@ -40,7 +61,9 @@ gulp.task 'compile-src', ->
   gulp
     .src paths.src
     .pipe sourcemaps.init()
+    .pipe hubotHelp.init()
     .pipe coffee(bare: true).on('error', gutil.log)
+    .pipe hubotHelp.write()
     .pipe sourcemaps.write()
     .pipe gulp.dest(paths.compiledSrcDir)
 
