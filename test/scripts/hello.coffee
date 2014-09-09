@@ -91,3 +91,9 @@ describe 'hello', ->
       it 'send "hello!"', ->
         assert @send.callCount is 1
         assert @send.firstCall.args[0] is 'hello!'
+
+  describe 'robot.helpCommands()', ->
+    it 'should be ["hubot XXX [<args>] - DESCRIPTION"]', ->
+      assert.deepEqual @robot.helpCommands(), [
+        "hubot XXX [<args>] - DESCRIPTION"
+      ]
