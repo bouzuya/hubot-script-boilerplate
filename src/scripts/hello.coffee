@@ -14,5 +14,5 @@
 #   bouzuya <m@bouzuya.net>
 #
 module.exports = (robot) ->
-  robot.respond /hello$/i, (res) ->
+  robot.respond /h(?:ello|i)$/i, (res) ->
     res.send 'hello!'

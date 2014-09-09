@@ -22,21 +22,39 @@ describe 'hello', ->
     @robot.shutdown()
 
   describe 'listeners[0].regex', ->
-    beforeEach ->
-      @sender = new User 'bouzuya', room: 'hitoridokusho'
-      @callback = @sinon.spy()
-      @robot.listeners[0].callback = @callback
-
-    describe 'receive "@hubot hello"', ->
+    describe 'valid patterns', ->
       beforeEach ->
-        message = '@hubot hello'
-        @robot.adapter.receive new TextMessage(@sender, message)
+        @tests = [
+          message: '@hubot hello'
+          matches: ['@hubot hello']
+        ,
+          message: '@hubot hi'
+          matches: ['@hubot hi']
+        ]
 
-      it 'matches', ->
-        assert @callback.callCount is 1
-        match = @callback.firstCall.args[0].match
-        assert match.length is 1
-        assert match[0] is '@hubot hello'
+      it 'should match', ->
+        @tests.forEach ({ message, matches }) =>
+          callback = @sinon.spy()
+          @robot.listeners[0].callback = callback
+          sender = new User 'bouzuya', room: 'hitoridokusho'
+          @robot.adapter.receive new TextMessage(sender, message)
+          actualMatches = callback.firstCall.args[0].match.map((i) -> i)
+          assert callback.callCount is 1
+          assert.deepEqual actualMatches, matches
+
+    describe 'invalid patterns', ->
+      beforeEach ->
+        @messages = [
+          '@hubot hoge'
+        ]
+
+      it 'should not match', ->
+        @messages.forEach (message) =>
+          callback = @sinon.spy()
+          @robot.listeners[0].callback = callback
+          sender = new User 'bouzuya', room: 'hitoridokusho'
+          @robot.adapter.receive new TextMessage(sender, message)
+          assert callback.callCount is 0
 
   describe 'listeners[0].callback', ->
     beforeEach ->
