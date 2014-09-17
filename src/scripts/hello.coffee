@@ -1,9 +1,6 @@
 # Description
 #   A Hubot script that DESCRIPTION
 #
-# Dependencies:
-#   None
-#
 # Configuration:
 #   None
 #
