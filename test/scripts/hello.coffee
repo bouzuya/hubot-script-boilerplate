@@ -95,5 +95,5 @@ describe 'hello', ->
   describe 'robot.helpCommands()', ->
     it 'should be ["hubot XXX [<args>] - DESCRIPTION"]', ->
       assert.deepEqual @robot.helpCommands(), [
-        "hubot XXX [<args>] - DESCRIPTION"
+        'hubot XXX [<args>] - DESCRIPTION'
       ]
