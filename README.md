@@ -4,12 +4,11 @@ A Hubot script that DESCRIPTION
 
 ## Installation
 
-    $ npm install git://github.com/bouzuya/hubot-XXX.git
+    $ npm install https://github.com/bouzuya/hubot-XXX/archive/master.tar.gz
 
 or
 
-    $ # TAG is the package version you need.
-    $ npm install 'git://github.com/bouzuya/hubot-XXX.git#TAG'
+    $ npm install https://github.com/bouzuya/hubot-XXX/archive/{VERSION}.tar.gz
 
 ## Example
 
