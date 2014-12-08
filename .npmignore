@@ -1,3 +1,4 @@
+.hubot_history
 .travis.yml
 coverage
 gulpfile.coffee
