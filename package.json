@@ -35,7 +35,7 @@
     "gulp": "^3.8.7",
     "gulp-coffee": "^2.1.1",
     "gulp-coveralls": "^0.1.2",
-    "gulp-espower": "^0.9.0",
+    "gulp-espower": "^0.10.0",
     "gulp-istanbul": "^0.2.2",
     "gulp-mocha": "^1.0.0",
     "gulp-sourcemaps": "^1.1.4",
