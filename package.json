@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/bouzuya/hubot-XXX",
   "devDependencies": {
-    "coffee-script": "^1.7.1",
+    "coffee-script": "^1.8.0",
     "del": "^0.1.2",
     "gulp": "^3.8.7",
     "gulp-coffee": "^2.1.1",
