@@ -38,7 +38,7 @@ gulp.task 'clean', (done) ->
     paths.compiledDir
     paths.coverageDir
     paths.buildDir
-  ], done
+  ], -> done()
 
 gulp.task 'coveralls', ->
   coveralls = require 'gulp-coveralls'
