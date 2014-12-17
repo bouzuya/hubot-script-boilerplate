@@ -7,7 +7,7 @@
     "build": "gulp",
     "clean": "gulp clean",
     "coveralls": "gulp coveralls",
-    "robot": "hubot --adapter shell",
+    "robot": "HUBOT_SHELL_USER_NAME='bouzuya' hubot --adapter shell --name hubot",
     "test": "gulp test",
     "watch": "gulp watch"
   },
