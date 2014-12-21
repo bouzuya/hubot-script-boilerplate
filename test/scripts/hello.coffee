@@ -12,7 +12,7 @@ describe 'hello', ->
     @robot = new Robot(path.resolve(__dirname, '..'), 'shell', false, 'hubot')
     @robot.adapter.on 'connected', =>
       @robot.load path.resolve(__dirname, '../../src/scripts')
-      setTimeout done, 10 # wait for parseHelp()
+      done()
     @robot.run()
 
   afterEach (done) ->
