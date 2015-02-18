@@ -33,6 +33,7 @@
     "clean": "hss clean",
     "coveralls": "hss coveralls",
     "robot": "HUBOT_SHELL_USER_NAME='bouzuya' hubot --adapter shell --name hubot",
+    "robot-debug": "HUBOT_LOG_LEVEL='debug' HUBOT_SHELL_USER_NAME='bouzuya' hubot --adapter shell --name hubot",
     "test": "hss test",
     "watch": "hss watch"
   }
