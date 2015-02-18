@@ -24,7 +24,7 @@ See [`src/scripts/XXX.coffee`](src/scripts/XXX.coffee).
 
 ## Development
 
-`npm run`
+See `npm run`
 
 ## License
 
